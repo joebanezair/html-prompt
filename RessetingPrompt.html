@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resetting Password</title>
+    <link rel="stylesheet" type="text/css" href="./PasswordNewCSS.css" />
+</head>
+<body>
+  
+  <div  id="containenr">
+    <div id="body" >
+      <table>
+        <tbody>
+          <tr>
+            <td>
+             <div id="font-icon"></div>
+            </td>
+            <td>
+              <div style="width: 500px; white-space: normal; padding-right: 40px;">
+                <h1 id="title">Resetting your Password for<br/>GoPlay360 ⚠️</h1>
+                <p id="announcement">Loading...</p>
+                <div id="header">
+                  <a href="https://www.shafayouxi.org/public/v11/user/email/reset/password/confirm?token=eda3e714fb3d4fd6bc887492ccd70482" target="_blank">
+                    https://www.shafayouxi.org/public<br/>/v11/user/email/reset/password/confirm?token=eda3e714fb3d4fd6bc887492ccd70482
+                  </a>
+                </div>
+                <div>
+                    <div style="color: black;">Thank you😊!</div>
+                    <div id="datetime"></div>
+                </div>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script>
+      var now = new Date();
+      var dateTimeString = now.toLocaleString();
+      document.getElementById('datetime').innerText = "Date: " + dateTimeString;
+      const values = {
+          "page_title":"Password change success!",
+          "header_title":"Resetting your Account Password for GoPlay360",
+          "announcement":"Please follow this link to reset your password:",
+          "email":"Email :",
+          "owner":"kevinanew@gmail.com",
+          "link":"https://www.shafayouxi.org/public/v11/user/email/reset/password/confirm?token=eda3e714fb3d4fd6bc887492ccd70482"
+      }
+      document.getElementById("announcement").innerHTML = values.announcement;
+      document.getElementById("email").innerHTML = values.email;
+      document.getElementById("header").innerHTML = values.link;
+      document.title = values.page_title;
+      document.getElementById("owner").innerHTML = values.owner;
+      document.getElementById("h5h").innerText = values.password;
+  </script>
+</body>
+</html>
